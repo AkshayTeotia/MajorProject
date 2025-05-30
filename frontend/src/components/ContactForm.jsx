@@ -61,7 +61,7 @@ const ContactForm = () => {
     }
     await new Promise(resolve=>setTimeout(resolve,500)) ;
       
-axios.post("http://localhost:5000/user/contact",payload)
+axios.post("https://major-project-omega-ochre.vercel.app/user/contact",payload)
 .then((res)=>{
     setLoading(false);
     toast("Message sent  Successfull")
@@ -82,7 +82,7 @@ axios.post("http://localhost:5000/user/contact",payload)
   return (
     <AnimatePresence>
       <motion.div
-        className="flex-grow bg-gray-50 px-4 sm:px-6 md:px-12 lg:px-24 py-10 max-w-4xl mx-auto rounded-lg shadow-lg"
+        className="flex-grow bg-green-300 px-4 sm:px-6 md:px-12 lg:px-24 py-10 max-w-4xl mx-auto rounded-lg shadow-lg"
         initial="hidden"
         animate="visible"
         exit="exit"

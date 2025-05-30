@@ -84,7 +84,7 @@ export default function PlantDiseaseDetector() {
   return (
     <div className="flex justify-center items-center min-h-screen  p-4">
       <motion.div
-        className="w-full max-w-2xl bg-white shadow-2xl rounded-3xl p-6 md:p-10"
+        className="w-full max-w-2xl bg-green-300 shadow-2xl rounded-3xl p-6 md:p-10"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.4 }}

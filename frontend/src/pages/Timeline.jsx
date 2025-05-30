@@ -24,7 +24,7 @@ const Timeline = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/user/profile", {}, header);
+      const res = await axios.post("https://major-project-omega-ochre.vercel.app/user/profile", {}, header);
       setData(res.data.data);
     } catch (err) {
       console.error("Error while fetching user data:", err);
@@ -42,7 +42,7 @@ const Timeline = () => {
 
     const fetchCrops = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/seasons/${data.id}`);
+        const res = await axios.get(`https://major-project-omega-ochre.vercel.app/api/seasons/${data.id}`);
         const allCrops = [...new Set(res.data.flatMap(season => season.crops))];
         setCrops(allCrops);
       } catch (error) {
@@ -63,7 +63,7 @@ const Timeline = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/activities', {
+      await axios.post('https://major-project-omega-ochre.vercel.app/api/activities', {
         user: data.id,
         crop: selectedCrop,
         activityName,
@@ -84,7 +84,7 @@ const Timeline = () => {
     <div className="flex justify-center items-center min-h-screen bg-gray-50 p-4">
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full max-w-2xl bg-white rounded-2xl shadow-2xl p-8 space-y-6"
+        className="w-full max-w-3xl bg-green-300 rounded-2xl shadow-2xl p-8 space-y-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

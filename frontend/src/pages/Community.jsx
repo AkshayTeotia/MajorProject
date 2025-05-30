@@ -41,7 +41,7 @@ const Community= () => {
     setLoading(true);
     setError("");
     try {
-      const res = await axios.get("http://localhost:5000/api/posts", {
+      const res = await axios.get("https://major-project-omega-ochre.vercel.app/api/posts", {
         params: { sort: sortOrder },
       });
       setPosts(res.data);
@@ -63,7 +63,7 @@ const Community= () => {
     await new Promise(resolve=>setTimeout(resolve,500)) ;
     if (!newPost.trim()) return;
     try {
-      const res = await axios.post("http://localhost:5000/api/posts", {
+      const res = await axios.post("https://major-project-omega-ochre.vercel.app/api/posts", {
         text: newPost,
       });
       setNewPost("");
@@ -77,7 +77,7 @@ const Community= () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/posts/${id}`);
+      await axios.delete(`https://major-project-omega-ochre.vercel.app/api/posts/${id}`);
       setPosts((prev) => prev.filter((p) => p._id !== id));
     } catch (err) {
         console.error("Failed to reply:", err);
@@ -96,7 +96,7 @@ const Community= () => {
     await new Promise(resolve=>setTimeout(resolve,500)) ;
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/posts/${postId}/reply`,
+        `https://major-project-omega-ochre.vercel.app/api/posts/${postId}/reply`,
         { text: replyText }
       );
       setReply((prev) => ({ ...prev, [postId]: "" }));
@@ -113,14 +113,14 @@ const Community= () => {
   return (
     <AnimatePresence>
       <motion.div
-        className="max-w-3xl mx-auto py-10 p-6 bg-green-50 border border-gray-300 shadow-lg rounded-lg"
+        className="max-w-3xl mx-auto py-10 p-6 bg-green-300 border border-gray-300 shadow-lg rounded-lg"
         initial="hidden"
         animate="visible"
         exit="exit"
         variants={containerVariants}
       >
         {/* Heading */}
-        <motion.h2 className="text-3xl font-bold text-green-400 text-center mb-6 drop-shadow-md" variants={itemVariants}>
+        <motion.h2 className="text-3xl font-bold text-green-900 text-center mb-6 drop-shadow-md" variants={itemVariants}>
           Community Chat
         </motion.h2>
 

@@ -19,7 +19,7 @@ const CropCalendar = () => {
         <a  className='hover:text-gray-950 active:underline' href="/active-seasons">Planning</a>
         <a className='hover:text-gray-950 active:underline' href="/active-seasons">History</a>
       </div>
-      <div className="mb-4 bg-green-100 p-5 rounded ">
+      <div className="mb-4 bg-green-300 p-5 rounded ">
         <div className='bg-white w-12 h-12 p-3.5 rounded-[50%]'><FiPlusCircle fontSize={20}/></div>
         <h2 className="bg-green-100 text-green-850 pt-3  text-2xl font-medium">
           Add New Growing Season

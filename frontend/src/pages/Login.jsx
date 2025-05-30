@@ -27,7 +27,7 @@ export default function Login() {
     }
     await new Promise(resolve=>setTimeout(resolve,1500)) ; 
       
-axios.post("http://localhost:5000/user/login",payload)
+axios.post("https://major-project-omega-ochre.vercel.app/user/login",payload)
 .then((res)=>{
     setLoading(false);
     toast("Login Successfull")

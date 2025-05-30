@@ -25,7 +25,7 @@ const CropSelector = () => {
     };
 
     try {
-      const res = await axios.post("http://localhost:5000/user/profile", {}, header);
+      const res = await axios.post("https://major-project-omega-ochre.vercel.app/user/profile", {}, header);
       setData(res.data.data);
       console.log("User Data Fetched", res);
     } catch (err) {
@@ -57,7 +57,7 @@ const CropSelector = () => {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/season', {
+      const res = await axios.post('https://major-project-omega-ochre.vercel.app/api/season', {
         seasonName: season,
         crops: selectedCrops,
         user: data.id
@@ -75,14 +75,14 @@ const CropSelector = () => {
 
   return (
     <motion.div
-      className="min-h-screen flex items-center justify-center bg-gray-50"
+      className="min-h-screen flex items-center justify-center bg-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <motion.form
         onSubmit={handleSubmit}
-        className="w-full max-w-md p-8 bg-white shadow-2xl rounded-xl"
+        className="w-full max-w-3xl p-8 bg-green-300 shadow-2xl rounded-xl"
         initial={{ y: 30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.6 }}
@@ -96,7 +96,7 @@ const CropSelector = () => {
           id="season"
           value={season}
           onChange={(e) => setSeason(e.target.value)}
-          className="w-full mb-4 p-2 border border-gray-300 text-gray-500 rounded-lg focus:ring-2 focus:ring-green-400"
+          className="w-full mb-4 p-2 border bg-white border-gray-700 text-gray-600 rounded-lg focus:ring-2 focus:ring-green-400"
         >
           <option value="">-- Choose a Season --</option>
           <option value="Rabi">Rabi</option>

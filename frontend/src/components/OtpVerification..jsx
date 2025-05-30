@@ -29,7 +29,7 @@ const OTPVerification = () => {
     setStatus('');
 
     try {
-      const res = await axios.post(`http://localhost:5000/user/forgot-password/verify-otp/${otp}`);
+      const res = await axios.post(`https://major-project-omega-ochre.vercel.app/user/forgot-password/verify-otp/${otp}`);
       if (res.data.success) {
         setStatus('✅ OTP verified successfully!');
         setTimeout(() => navigate('/reset-password'), 1200);

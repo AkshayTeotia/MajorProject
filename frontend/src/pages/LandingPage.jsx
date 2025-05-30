@@ -8,7 +8,7 @@ export default function LandingPage() {
   return (
     <div className="bg-gradient-to-br from-green-100 via-lime-200 to-yellow-100 min-h-screen overflow-x-hidden">
       {/* Hero Section */}
-      <section className="w-full flex flex-col items-center justify-center text-center p-10 bg-[url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6')] bg-cover bg-no-repeat bg-center">
+      <section className="w-full flex flex-col items-center justify-center text-center p-10 bg-[url('https://images.prismic.io//intuzwebsite/ee51a4e5-4769-4a1b-b4a4-ce1ae93731a5_Banner%402x.png?w=2400&q=80&auto=format,compress&fm=png8')] bg-cover bg-no-repeat bg-center">
         <motion.h1 
           initial={{ opacity: 0, y: -50 }} 
           animate={{ opacity: 1, y: 0 }} 
@@ -21,7 +21,7 @@ export default function LandingPage() {
           initial={{ opacity: 0 }} 
           animate={{ opacity: 1 }} 
           transition={{ delay: 0.5, duration: 1 }}
-          className="text-xl mt-4 text-green-700 max-w-xl"
+          className="text-2xl mt-4 text-white max-w-xl"
         >
           Empowering Farmers with Smart Agriculture Tools: Disease Detection, Forecasting, Scheduling & More
         </motion.p>
@@ -75,7 +75,7 @@ export default function LandingPage() {
               whileInView={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.6, delay: i * 0.2 }} 
               viewport={{ once: true }}
-              className="bg-green-50 p-6 rounded-2xl shadow-md hover:shadow-xl border border-green-200"
+              className="bg-green-300 p-6 rounded-2xl shadow-md hover:shadow-xl border border-green-200"
             >
               <h3 className="text-xl font-bold text-green-800 mb-2">{feature.title}</h3>
               <p className="text-gray-700">{feature.desc}</p>

@@ -68,7 +68,7 @@ const Weather = () => {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto px-6 py-10 bg-white rounded-xl shadow-lg"
+      className="max-w-4xl mx-auto px-6 py-10 bg-green-300 rounded-xl shadow-lg"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -40 }}
@@ -82,7 +82,7 @@ const Weather = () => {
           value={query}
           onChange={handleLocationChange}
           placeholder="Search location..."
-          className="border border-gray-300 p-3 w-full rounded-md shadow-sm"
+          className="border border-gray-300 bg-white p-3 w-full rounded-md shadow-sm"
         />
         {suggestions.length > 0 && (
           <ul className="absolute w-full bg-white border mt-1 rounded shadow-md z-10">
@@ -123,7 +123,7 @@ const CurrentConditions = ({ data, onHourlyClick, selectedLocation }) => {
 
   return (
     <motion.div
-      className="bg-green-50 p-5 rounded-lg mb-6 shadow-md"
+      className="bg-white p-5 rounded-lg mb-6 shadow-md"
       initial={{ opacity: 0, x: -40 }}
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 40 }}
@@ -165,7 +165,7 @@ const HourlyForecast = ({ data, onClose }) => {
         {data.time.map((time, index) => (
           <motion.div
             key={index}
-            className="min-w-[160px] bg-green-100 p-3 rounded-md shadow-sm text-center"
+            className="min-w-[160px] bg-green-200 p-3 rounded-md shadow-sm text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: index * 0.05 }}

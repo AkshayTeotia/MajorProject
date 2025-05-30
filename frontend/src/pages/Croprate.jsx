@@ -184,7 +184,7 @@ function CropRateComponent() {
   return (
     <AnimatePresence>
   <motion.div
-    className="max-w-xl mx-auto py-10 p-6 bg-green-50 rounded-lg shadow-lg"
+    className="max-w-xl mx-auto py-10 p-6 bg-green-300 rounded-lg shadow-lg"
     initial="hidden"
     animate="visible"
     exit="exit"

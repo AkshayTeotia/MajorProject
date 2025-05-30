@@ -15,7 +15,7 @@ const ForgotPassword = () => {
     setStatus('');
 
     try {
-      const res = await axios.post('http://localhost:5000/user/forgot-password', { email });
+      const res = await axios.post('https://major-project-omega-ochre.vercel.app/user/forgot-password', { email });
       setStatus(res.data.message || '✅ If this email exists, a reset link has been sent.');
       navigate("/forgot-password/verify-otp")
     } catch (err) {

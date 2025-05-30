@@ -46,7 +46,7 @@ export default function Signup() {
 
     await new Promise(resolve => setTimeout(resolve, 1500));
 
-    axios.post("http://localhost:5000/user/register", payload)
+    axios.post("https://major-project-omega-ochre.vercel.app/user/register", payload)
       .then((res) => {
         setLoading(false);
         toast("Account created successfully");
